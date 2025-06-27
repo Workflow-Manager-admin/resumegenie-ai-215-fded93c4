@@ -14,7 +14,12 @@ export default defineNuxtConfig({
   vite: {
     server: {
       host: '0.0.0.0',
-      allowedHosts: true,
+      // Add the required host to allowedHosts array for Vite server
+      allowedHosts: [
+        'vscode-internal-1641-beta.beta01.cloud.kavia.ai',
+        'localhost',
+        '127.0.0.1',
+      ],
       port: 3000,
     },
   },
